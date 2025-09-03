@@ -18,6 +18,7 @@ app.use(
     origin: process.env.CLIENT_URI,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   })
 );
 
