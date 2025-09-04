@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-
 import HERO_IMG from '../assets/hero-img.png'
 import {APP_FEATURES} from '../utils/data'
 import { useNavigate } from 'react-router-dom'
@@ -28,11 +27,11 @@ const LandingPage = () => {
   return (
     <>
     <div className='w-full min-h-full bg-[#FFFCEF] '>
-      <div className=' w-[500px] h-[500px] bg-amber-200/20 blur-[65px] absolute top-0 left-0' />
-      <div className='container mx-auto px-4 pt-6 pb-[200px] relative z-10'>
+      <div className=' w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bg-amber-200/20 blur-[65px] absolute top-0 left-0' />
+      <div className='container mx-auto px-4 md:px-10 pt-6 pb-[200px] relative z-10 mb-10'>
         {/* Headers */}
         <header className='flex justify-between items-center mb-16'>
-          <div className='text-xl text-black font-bold'>
+          <div className='text-lg sm:text-xl text-black font-bold'>
             Interview Prep AI
           </div>
             {user ? <ProfileInfoCard/> :<button
@@ -52,16 +51,16 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <h1 className='text-4xl sm:text-5xl text-black font-medium mb-6 leading-tight'>
+            <h1 className='text-4xl md:text-5xl text-black font-medium mb-4 sm:mb- leading-tight'>
               Ace Interview with <br/>
               <span className='text-transparent bg-clip-text bg-[radial-gradient(circle,#FF9324_0%,#FCD760_100%)] bg-[length:200%_200%] animate-text-shine font-semibold '>
                 AI-Powered
-              </span>{""}
+              </span>{" "}
               Learning
             </h1>
           </div>
-          <div className='w-full md:w-1/2'>
-            <p className='text-[17px] text-gray-900 mr-0 md:mr-20 mb-6'>
+          <div className=' w-full md:w-1/2'>
+            <p className='text-base md:text-[17px]  text-gray-900 mr-0 md:mr-20 mb-6'>
               Get role-specific questions, expand answers when you need them,
               dive deeper into concepts, and organize everything your way.
               From preparation to mastery - your ultimate interview toolkit is 
@@ -89,7 +88,7 @@ const LandingPage = () => {
         </div>
 
         <div className='w-full min-h-full bg-[#FFFCEF] mt-10'>
-          <div className='container mx-auto px-4 pt-10 pb-20'>
+          <div className='container mx-auto px-4 pt-10 pb-20 md:px-10'>
             <section className='mt-5'>
               <h2 className='text-2xl font-medium text-center mb-12'>
                 Features That Make You Shine
@@ -165,7 +164,3 @@ const LandingPage = () => {
 }
 
 export default LandingPage
-
-
-
-
