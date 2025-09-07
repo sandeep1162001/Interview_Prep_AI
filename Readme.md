@@ -3,27 +3,6 @@
 Interview Prep AI is an AI-powered platform that helps candidates prepare for technical interviews. It generates **custom interview questions**, provides **detailed answers**, to build confidence before real interviews.  
 
 ---
-
-## 🚀 Features  
-
-- **AI-Generated Questions** – Tailored to role, experience level, and topics of interest.  
-- **Detailed Explanations** – Beginner-friendly answers with examples and code snippets.  
-- **Interactive Practice** – Simulates a real interview experience.  
-- **Concept Revision** – Quick concept explanations for last-minute prep.  
-- **Custom Sessions** – Create personalized mock interview sessions.  
-- **Multi-Domain Support** – DSA, Web Dev, AI/ML,Frontend, Backend, Full Stack or UI/UX  
-
----
-
-## 🛠️ Tech Stack  
-
-- **Frontend:** React.js, Tailwind CSS  
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB  
-- **AI:** OpenAI / Gemini API (LLM for question-answer generation)  
-- **Authentication:** JWT-based auth  
-- **Deployment:** Vercel (frontend) + Render(backend)  
-
 ---
 ## 📂 Project Structure  
 
@@ -102,16 +81,26 @@ npm run dev
 
 ---
 
-## 🛠 Tech Stack
 
-| Layer       | Technology          |
-| ----------- | ------------------- |
-| Frontend    | React.js            |
-| Backend     | Node.js, Express.js |
-| AI          | GEMINI flash 2.o    |
-| DataBase    | MongoDB             |
+## 🚀 Features  
+
+- **AI-Generated Questions** – Tailored to role, experience level, and topics of interest.  
+- **Detailed Explanations** – Beginner-friendly answers with examples and code snippets.  
+- **Interactive Practice** – Simulates a real interview experience.  
+- **Concept Revision** – Quick concept explanations for last-minute prep.  
+- **Custom Sessions** – Create personalized mock interview sessions.  
+- **Multi-Domain Support** – DSA, Web Dev, AI/ML,Frontend, Backend, Full Stack or UI/UX  
 
 ---
+## 🛠️ Tech Stack  
+
+- **Frontend:** React.js, Tailwind CSS  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB  
+- **AI:** OpenAI / Gemini API (LLM for question-answer generation)  
+- **Authentication:** JWT-based auth  
+- **Deployment:** Vercel (frontend) + Render(backend)  
+
 
 ## 🤝 Contributing
 
