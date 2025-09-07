@@ -32,7 +32,7 @@ const RoleInfoHeader = ({
             <div className="text-[10px] font-semibold text-white bg-black px-3 py-1 rounded-full ">
               {questions} Q&A
             </div>
-            <div className="text-[10px] font-semibold text-white bg-black px3 py-1 rounded-full ">
+            <div className="text-[10px] font-semibold text-white bg-black px-3 py-1 rounded-full ">
               Last Updated: {lastUpdated}
             </div>
           </div>
