@@ -42,8 +42,8 @@ app.use(
   })
 );
 
-// ✅ Handle preflight requests
-app.options("*", cors());
+// FIXED preflight route
+app.options(/.*/, cors(corsOptions));
 
 // Connect DB
 connectDB();
