@@ -18,31 +18,31 @@ const app = express();
 
 // ✅ Allowed frontend origins
 const allowedOrigins = [
-  "http://localhost:5173", // Vite local frontend
-  "http://localhost:3000", // CRA / Next local frontend
-  "https://interview-prep-ai-liard.vercel.app", // deployed frontend
+  "http://localhost:5173",
+  "http://localhost:3000",
+  "https://interview-prep-ai-liard.vercel.app",
 ];
 
-// ✅ CORS middleware
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // allow requests with no origin (Postman, mobile apps)
-      if (!origin) return callback(null, true);
+// ✅ Define CORS options ONCE
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
 
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
 
-      return callback(new Error(`CORS blocked for origin: ${origin}`));
-    },
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-  })
-);
+    return callback(new Error(`CORS blocked for origin: ${origin}`));
+  },
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
 
-// FIXED preflight route
+// ✅ Use CORS middleware
+app.use(cors(corsOptions));
+
+// ✅ Handle preflight safely
 app.options(/.*/, cors(corsOptions));
 
 // Connect DB
@@ -59,9 +59,9 @@ app.use("/api/questions", questionRoutes);
 app.use("/api/ai/generate-questions", protect, generateInterviewQuestions);
 app.use("/api/ai/generate-explanation", protect, generateConceptExplanation);
 
-// Serve uploads folder
+// Static uploads
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// Start Server
+// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
